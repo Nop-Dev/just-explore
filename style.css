@@ -33,7 +33,11 @@ header {
     margin-inline: 2.2rem;
 }
 
-header img#astronaut {
+div#header-img {
+    text-align: center;
+}
+
+img#astronaut {
     max-height: 32rem;
     max-width: 32rem;
     margin-bottom: 2rem;
@@ -164,7 +168,58 @@ footer {
 
 /* Responsividade */
 @media (min-width: 450px) {
+    :root {
+        font-size: 70%;
+    }
+
     main div {
         text-align: center;
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 750px) {
+    :root {
+        font-size: 62.5%;
+    }
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        'header header-img'
+        'cards cards'
+        'contact contact-bg'
+        'footer footer';
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 75vh;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    img#astronaut {
+        grid-area: header-img;
+    }
+
+    main {
+        grid-area: cards;
+        grid-template-areas: 'planet1 planet2 planet3';
+        width: 100%;
+    }
+
+    section#contact {
+        grid-area: contact;
+    }
+
+    div#bg-contact {
+        grid-area: contact-bg;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer {
+        grid-area: footer;
     }
 }
