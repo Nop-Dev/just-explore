@@ -148,6 +148,15 @@ button {
     padding: 1.6rem;
 }
 
+/* Footer */
+footer {
+    color: var(--full-white);
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: var(--main-purple);
+    padding: 3.2rem 1.6rem;
+}
+
 /* Responsividade */
 @media (min-width: 450px) {
     main div {
