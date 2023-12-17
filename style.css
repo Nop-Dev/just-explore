@@ -5,9 +5,8 @@
 
     --full-white: rgb(255, 255, 255);
     --background--white: rgb(249, 244, 251);
-    --main-purple: rgb(49, 45, 100);
+    --main-purple: rgb(49, 45, 100); 
     --purple-text: rgb(181, 33, 132);
-    --dark-text: rgb(49, 45, 100);
 }
 
 * {
@@ -72,14 +71,14 @@ main div {
     border-radius: 10px;
 }
 
-div h3 {
+div h3, fieldset {
     color: var(--purple-text);
     font-size: 2.9rem;
     font-weight: 900;
 }
 
 div p {
-    color: var(--dark-text);
+    color: var(--main-purple);
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
@@ -95,6 +94,61 @@ div p {
     letter-spacing:-0.5px;
 }
 
+/* Entre em contato */
+section#contact {
+    padding: 4rem;
+}
+
+form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+form fieldset legend {
+    margin-bottom: 3rem;
+}
+
+input, textarea, button {
+    color: black;
+    font-family: Mulish, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--main-purple);
+}
+
+input {
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 5.2rem;    
+}
+
+.input-wrapper i {
+    padding: 1.4rem;
+    position: absolute;
+}
+
+textarea {
+    width: 100%;
+    
+    padding: 1.5rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--main-purple);
+}
+
+button {
+    color: var(--full-white);
+    border: none;
+    background-color: var(--main-purple);
+    margin-top: 3rem;
+    padding: 1.6rem;
+}
+
+/* Responsividade */
 @media (min-width: 450px) {
     main div {
         text-align: center;
