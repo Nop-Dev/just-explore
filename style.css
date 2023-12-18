@@ -157,6 +157,10 @@ button {
     padding: 1.6rem;
 }
 
+div#bg-contact {
+    display: none;
+}
+
 /* Footer */
 footer {
     color: var(--full-white);
@@ -197,10 +201,24 @@ footer {
 
     header {
         grid-area: header; 
+        max-width: 100%;
+
+        display: flex;
+
+        text-align: center;
+        flex-direction: column;
     }
 
     header.text-space {
         grid-area: title;
+
+        display: flex;
+        text-align: center;
+
+    }
+
+    img#arrow {
+        max-height: 105px;
     }
 
     img#astronaut {
@@ -221,6 +239,8 @@ footer {
     }
 
     div#bg-contact {
+        display: block;
+
         grid-area: contact-bg;
         width: 100%;
         margin-right: 0;
